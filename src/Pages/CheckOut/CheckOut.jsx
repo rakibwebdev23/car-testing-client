@@ -18,13 +18,15 @@ const CheckOut = () => {
         const form = e.target;
         const name = form.name.value;
         const lastName = form.lastName.value;
-        const email = form.email.value;
+        const email = users?.email;
+        const date = form.date.value;
         const phoneNumber = form.phoneNumber.value;
         const order = {
             customerName: name +lastName,
             img,
             title,
             customerEmail: email,
+            date,
             phoneNumber,
             price: price,
             service_id: _id

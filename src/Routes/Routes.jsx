@@ -9,18 +9,19 @@ import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import BookingOrders from "../Pages/BookingOrders/BookingOrders";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>, 
+        element: <Main></Main>,
         children: [
             {
                 path: '/',
                 element: <Home></Home>
             },
             {
-                path:'/about',
+                path: '/about',
                 element: <About></About>
             },
             {
@@ -46,11 +47,11 @@ const router = createBrowserRouter([
             {
                 path: "/checkout/:id",
                 element: <CheckOut></CheckOut>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: '/bookOrders',
-                element: <BookingOrders></BookingOrders>
+                element: <PrivateRoute><BookingOrders></BookingOrders></PrivateRoute>
             }
         ]
     }
