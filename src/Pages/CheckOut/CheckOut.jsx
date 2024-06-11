@@ -22,7 +22,7 @@ const CheckOut = () => {
         const date = form.date.value;
         const phoneNumber = form.phoneNumber.value;
         const order = {
-            customerName: name +lastName,
+            customerName: name + lastName,
             img,
             title,
             customerEmail: email,
@@ -97,7 +97,6 @@ const CheckOut = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                    <textarea className="p-6 h-32 input input-bordered mb-6" name="Your message" id="">Your message</textarea>
                     <input className="btn bg-orange-600 text-white btn-block hover:text-black" type="submit" value="Order Confirm" />
                 </div>
             </form>
