@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaFileDownload } from 'react-icons/fa';
 import DetailsRightNav from "./DetailsRightNav/DetailsRightNav";
 import logo from '../../..//assets/allImage/icons/logo.svg'
+import ServiceDetailsBanner from "./ServiceDetailsBanner/ServiceDetailsBanner";
 
 const ServiceDetails = () => {
 
@@ -13,6 +14,7 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <ServiceDetailsBanner></ServiceDetailsBanner>
             <div className="grid grid-cols-3 w-full gap-16">
                 <div className="col-span-2 space-y-8">
                     <div className="">
@@ -90,7 +92,7 @@ const ServiceDetails = () => {
                                     <h2 className="text-4xl font-bold text-white"><FaFileDownload></FaFileDownload></h2>
                                     <div>
                                         <h4 className=" font-bold ">Our Brochure</h4>
-                                        <span className="text-gray-500">Download</span>
+                                        <span className="text-gray-400">Download</span>
                                     </div>
                                 </div>
                                 <Link className="btn bg-orange-500 text-white font-bold text-2xl border-none hover:text-black mr-6"><FaArrowRight ></FaArrowRight></Link>
@@ -101,7 +103,7 @@ const ServiceDetails = () => {
                                     <div>
                                         <h4 className=" font-bold ">Company Details
                                         </h4>
-                                        <span className="text-gray-500">Download</span>
+                                        <span className="text-gray-400">Download</span>
                                     </div>
                                 </div>
                                 <Link className="btn bg-orange-500 text-white font-bold text-2xl border-none mr-6 hover:text-black"><FaArrowRight></FaArrowRight></Link>
