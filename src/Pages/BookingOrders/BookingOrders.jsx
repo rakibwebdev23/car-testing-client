@@ -8,13 +8,13 @@ const BookingOrders = () => {
     const { users } = useContext(AuthContext);
     const [bookOrders, setBookOrders] = useState([]);
 
-    const url = `http://localhost:5000/orders?customerEmail=${users?.email}`
+    const url = `http://localhost:5000/orders?customerEmail=${users?.customerEmail}`
 
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setBookOrders(data))
-    })
+    }, [url])
 
     const handleDelete = (id) =>{
         fetch(`http://localhost:5000/orders/${id}`, {
